@@ -505,6 +505,11 @@ void *monitor_func(void* arg)
 			printf("SIGALRM received so exiting\n");
 			exit(1);
 		}
+		else if (received_signal == SIGTERM) //Sync logs
+		{
+			printf("SIGTERM received so exiting\n");
+			exit(1);
+		}
 
 		pthread_mutex_lock(&params->chan_p->lock);
 

@@ -1751,7 +1751,7 @@ static void SignalHandler (int signum)
 			exit(ERROR_TUNE);
 		}
 	}
-	else if (signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGHUP || signum == SIGINT || signum == SIGALRM)
+	else if (signum == SIGUSR1 || signum == SIGUSR2 || signum == SIGHUP || signum == SIGINT || signum == SIGALRM || signum == SIGTERM)
 	{
 		received_signal=signum;
 	}
