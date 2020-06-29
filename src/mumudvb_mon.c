@@ -497,18 +497,18 @@ void *monitor_func(void* arg)
 		}
 		else if (received_signal == SIGINT) //Sync logs
 		{
-			printf("SIGINT received so exiting\n");
-			exit(1);
+			printf("SIGINT received, Terminating by request\n");
+			exit(0);
 		}
 		else if (received_signal == SIGALRM) //Sync logs
 		{
-			printf("SIGALRM received so exiting\n");
+			printf("SIGALRM received, Terminating by request\n");
 			exit(1);
 		}
 		else if (received_signal == SIGTERM) //Sync logs
 		{
-			printf("SIGTERM received so exiting\n");
-			exit(1);
+			printf("SIGTERM received, Terminating by request\n");
+			exit(0);
 		}
 
 		pthread_mutex_lock(&params->chan_p->lock);
